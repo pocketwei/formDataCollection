@@ -1,0 +1,128 @@
+<html>
+    <body>
+    <form>
+        <p>Are you familiar and do you agree with the info and the Terms of Service presented in the link above?</p>
+            <label>
+                <input type="checkbox" id="yesToS" namea"yesToS" required> Yes to all, we can proceed!</label><br>
+        <br>
+        <fieldset>
+        <legend>YOUR COMMISSION</legend>
+        <p>Style of your commission</p>
+            <label>
+                <input type="radio" id="style1_hb" name="commission_style" value="STYLE1_HB" required> STYLE 1 - halfbody</label><br>
+            <label>
+                <input type="radio" id="style1_fb" name="commission_style" value="STYLE1_FB"> STYLE 1 - fullbody</label><br>
+            <label>
+                 <input type="radio" id="style2_hb" name="commission_style" value="STYLE2_HB"> STYLE 2 - halfbody</label><br>
+            <label>
+                <input type="radio" id="style2_fb" name="commission_style" value="STYLE2_FB"> STYLE 2 - fullbody</label><br>
+            <label>
+                <input type="radio" id="style3" name="commission_style" value="STYLE3"> STYLE 3 (halfbody only)</label><br>
+            <label>
+                <input type="radio" id="style4" name="commission_style" value="STYLE4"> STYLE 4 (halfbody only)</label><br>
+            <label>
+                <input type="radio" id="style5" name="commission_style" value="STYLE5"> STYLE 5 (sequential art)</label><br>
+            <label>
+                <input type="radio" id="unsure" name="commission_style" value="unsure"> Unsure (I will contact you to figure it out!)</label><br>
+        
+        <p>Do you want an extra background?</p>
+            <label>
+                <input type="radio" id="bg_yes" name="bakground_YN" value="bg_yes" required> Yes</label><br>
+            <label>
+                <input type="radio" id="bg_no" name="bakground_YN" value="bg_no"> No</label><br>
+        
+        <p>Do you wish to keep your commission private (i.e. not posted on social media)?</p>
+            <label>
+                <input type="radio" id="nda_yes" name="NDA_YN" value="nda_yes" required> Yes</label><br>
+            <label>
+                <input type="radio" id="nda_no" name="NDA_YN" value="nda_no"> No</label><br>
+            
+        <p>Do you have a deadline?</p>
+            <label>
+                <input type="radio" id="deadline_yes" name="deadline_YN" value="deadline_yes" required> Yes, my deadline is </label>
+                <input type="text" id="deadline" name="deadline" placeholder="date in DD/MM/YYYY" maxlength="10" size="29" disabled><br>
+            <label>
+                <input type="radio" id="deadline_no" name="deadline_YN" value="deadline_no"> No</label><br>
+
+        <p>Describe your idea!</p>
+                <textarea id="commission_prompt" name="commission_prompt" rows="4" cols="53" maxlength="600" placeholder="Mood, poses, expressions, background ideas if applicable, story/scenario, number of characters, etc." required></textarea><br><br>
+        <label>References<br>
+                    <br><input type="text" id="ref_link" name="ref_link" maxlength="360" size="50" placeholder="SwissTransfer, Google Drive, Dropbox, etc." required></label><br><br>
+        </fieldset>
+        <fieldset>
+            <legend>CONTACT INFO</legend>
+                <label>Your preferred name<br>
+                    <br><input type="text" id="name" name="name" maxlength="160" size="50" required></label><br><br>
+                <label>Email address to be used as contact method<br>
+                    <br><input type="email" id="email" name="email" maxlength="260" size="50" required>
+                </label>
+            <p>Upon completion, the artwork will be sent to you via a SwissTransfer link. It expires after 30 days, so please download your files before that.</p>
+            <p><i>I usually keep files as backup so you may ask for them in the future if you happen to lose them, but keep in mind that I'm not safe from data losses either! </i></p>
+                <label>
+                <input type="checkbox" id="yesTransfer" name="yesTransfer" required> Got it!</label><br>
+        </fieldset>
+        <fieldset>
+            <legend>BILLING</legend>
+            <label>Full legal name<br>
+                <p><i>I am legally obliged to mention it on invoices and for record-keeping.  It will be kept strictly private, and your pseudonym or preferred name will always be used in communications.</i></p>
+                <input type="text" id="billing_name" name="billing_name" size="50" maxlength="160" required></label><br><br>
+            <label>Billing address<br>
+                <p><i> Again, I am legally obliged to ask for a billing address to mention on invoices, and it will be kept strictly private. <u>You are allowed to refuse to communicate it.</u></i></p>
+                <input type="text" id="billing_address" name="billing_address" size="50" maxlength="260" required></label><br><br>
+            <label>
+                <input type="checkbox" id="billing_address_no" name="billing_address_no"> I refuse to communicate my billing address</label><br>    
+            <p>Which payment methods are available to you?</p>
+            <p><i>Please note: euro is the preferred currency and the commission will be billed in euro.</i></p>
+            <label>
+                <input type="checkbox" id="payment_card" name="payment" value="card"> Credit/debit card (Mastercard, Visa or Maestro only)</label><br>
+            <label>
+                <input type="checkbox" id="payment_stripe" name="payment" value="stripe"> Stripe</label><br>
+            <label>
+                <input type="checkbox" id="payment_paypal" name="payment" value="paypal"> Paypal</label><br>
+            <label>
+                <input type="checkbox" id="payment_none" name="payment" value="other"> None of the above</label><br>
+            <input type="text" id="payment_other" name="payment_other" size="50" style="display: none" maxlength="120" placeholder="Which other service can you use?">
+        </fieldset>
+        <p>Let me know if you have any other concern or questions!</p>
+                <textarea id="questions" name="questions" rows="4" cols="55" maxlength="400"></textarea><br>
+                <br>
+                <input type="submit" value="Send">
+                <input type="reset" value="Reset">
+    </form>
+    <script>
+        document.getElementById("deadline_yes").addEventListener("click", enableDeadline);
+        function enableDeadline() {
+            if (document.getElementById('deadline_yes').checked) {
+                document.getElementById("deadline").removeAttribute("disabled");
+                document.getElementById("deadline").setAttribute("required" , "")
+        }
+    }
+        document.getElementById("deadline_no").addEventListener("click", disableDeadline);
+        function disableDeadline() {
+            if (document.getElementById('deadline_no').checked) {
+                document.getElementById("deadline").setAttribute("disabled", "");
+        }
+    }
+        document.getElementById("billing_address_no").addEventListener("click", billingAddressNo);
+        function billingAddressNo() {
+            if (document.getElementById('billing_address_no').checked) {
+                document.getElementById("billing_address").removeAttribute("required");
+                document.getElementById("billing_address").setAttribute("disabled" , "")
+        }
+            else {
+                document.getElementById("billing_address").removeAttribute("disabled");
+                document.getElementById("billing_address").setAttribute("required" , "")
+        }
+    }
+        document.getElementById("payment_none").addEventListener("click", specifyOtherPayment);
+        function specifyOtherPayment() {
+            if (document.getElementById('payment_none').checked) {
+                document.getElementById("payment_other").style.display = "block";
+        }
+            else {
+                document.getElementById("payment_other").style.display = "none";
+        }
+    }
+    </script>
+    </body>
+</html>
