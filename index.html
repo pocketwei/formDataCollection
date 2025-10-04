@@ -1,9 +1,9 @@
 <html>
     <body>
-    <form>
+    <form id="commissionRequest" method="POST" data-netlify="true">
         <p>Are you familiar and do you agree with the info and the Terms of Service presented in the link above?</p>
             <label>
-                <input type="checkbox" id="yesToS" namea"yesToS" required> Yes to all, we can proceed!</label><br>
+                <input type="checkbox" id="yesToS" name="yesToS" required> Yes to all, we can proceed!</label><br>
         <br>
         <fieldset>
         <legend>YOUR COMMISSION</legend>
@@ -45,16 +45,16 @@
                 <input type="radio" id="deadline_no" name="deadline_YN" value="deadline_no"> No</label><br>
 
         <p>Describe your idea!</p>
-                <textarea id="commission_prompt" name="commission_prompt" rows="4" cols="53" maxlength="600" placeholder="Mood, poses, expressions, background ideas if applicable, story/scenario, number of characters, etc." required></textarea><br><br>
-        <label>References<br>
-                    <br><input type="text" id="ref_link" name="ref_link" maxlength="360" size="50" placeholder="SwissTransfer, Google Drive, Dropbox, etc." required></label><br><br>
+                <textarea id="commission_prompt" name="commission_prompt" rows="4" cols="53" minlength="20" maxlength="400" placeholder="Mood, poses, expressions, background ideas if applicable, story/scenario, number of characters, etc." required></textarea><br><br>
+        <label>References link<br>
+                    <br><input type="text" id="ref_link" name="ref_link" maxlength="150" size="50" placeholder="SwissTransfer, Google Drive, Dropbox, etc." required></label><br><br>
         </fieldset>
         <fieldset>
             <legend>CONTACT INFO</legend>
                 <label>Your preferred name<br>
-                    <br><input type="text" id="name" name="name" maxlength="160" size="50" required></label><br><br>
+                    <br><input type="text" id="name" name="name" maxlength="70" size="50" required></label><br><br>
                 <label>Email address to be used as contact method<br>
-                    <br><input type="email" id="email" name="email" maxlength="260" size="50" required>
+                    <br><input type="email" id="email" name="email" maxlength="80" size="50" required>
                 </label>
             <p>Upon completion, the artwork will be sent to you via a SwissTransfer link. It expires after 30 days, so please download your files before that.</p>
             <p><i>I usually keep files as backup so you may ask for them in the future if you happen to lose them, but keep in mind that I'm not safe from data losses either! </i></p>
@@ -65,10 +65,10 @@
             <legend>BILLING</legend>
             <label>Full legal name<br>
                 <p><i>I am legally obliged to mention it on invoices and for record-keeping.  It will be kept strictly private, and your pseudonym or preferred name will always be used in communications.</i></p>
-                <input type="text" id="billing_name" name="billing_name" size="50" maxlength="160" required></label><br><br>
+                <input type="text" id="billing_name" name="billing_name" size="50" maxlength="80" required></label><br><br>
             <label>Billing address<br>
                 <p><i> Again, I am legally obliged to ask for a billing address to mention on invoices, and it will be kept strictly private. <u>You are allowed to refuse to communicate it.</u></i></p>
-                <input type="text" id="billing_address" name="billing_address" size="50" maxlength="260" required></label><br><br>
+                <input type="text" id="billing_address" name="billing_address" size="50" maxlength="120" required></label><br><br>
             <label>
                 <input type="checkbox" id="billing_address_no" name="billing_address_no"> I refuse to communicate my billing address</label><br>    
             <p>Which payment methods are available to you?</p>
@@ -81,7 +81,7 @@
                 <input type="checkbox" id="payment_paypal" name="payment" value="paypal"> Paypal</label><br>
             <label>
                 <input type="checkbox" id="payment_none" name="payment" value="other"> None of the above</label><br>
-            <input type="text" id="payment_other" name="payment_other" size="50" style="display: none" maxlength="120" placeholder="Which other service can you use?">
+            <input type="text" id="payment_other" name="payment_other" size="50" style="display: none" maxlength="80" placeholder="Which other service can you use?">
         </fieldset>
         <p>Let me know if you have any other concern or questions!</p>
                 <textarea id="questions" name="questions" rows="4" cols="55" maxlength="400"></textarea><br>
@@ -107,11 +107,12 @@
         function billingAddressNo() {
             if (document.getElementById('billing_address_no').checked) {
                 document.getElementById("billing_address").removeAttribute("required");
-                document.getElementById("billing_address").setAttribute("disabled" , "")
+                document.getElementById("billing_address").setAttribute("disabled" , "");
+                document.getElementById("billing_address").value='';
         }
             else {
                 document.getElementById("billing_address").removeAttribute("disabled");
-                document.getElementById("billing_address").setAttribute("required" , "")
+                document.getElementById("billing_address").setAttribute("required" , "");
         }
     }
         document.getElementById("payment_none").addEventListener("click", specifyOtherPayment);
