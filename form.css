@@ -1,7 +1,111 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 body {
-font-family: Syne;
+font-family: "Syne";
+margin: 20px;
+max-width: 450px;
+color:#44589C;
 }
-</style>
+
+/* PARAGRAPHS & HEADERS */
+legend {
+font-weight: 800;
+}
+
+h1 {
+font-weight: 600;
+font-size: 17px;
+margin: 0px;
+padding: 0px;
+padding-bottom: 10px;
+}
+
+h2 {
+font-weight: 600;
+font-size: 17px;
+margin: 0px;
+padding: 0px;
+}
+
+p {
+line-height: 100%;
+font-size: 15px;
+margin: 0px;
+padding: 0px;
+padding-bottom: 10px;
+}
+
+/* BOXES */
+.button-row {
+width: 545px;
+text-align: center;
+}
+
+fieldset {
+padding-left: 80px;
+padding-right: 80px;
+padding-bottom: 20px;
+margin-bottom:20px;
+max-width: 450px;
+border-color:#7EA5DE;
+border-style: dotted;
+}
+
+textarea {
+max-width: 545px;
+border: 1px solid #E89900;
+padding: 4px;
+color:#3e3d6b;
+border-radius: 10px;
+}
+
+textarea::placeholder {
+color:#979ea8;
+padding: inherit;
+}
+
+input[type=text]{
+border-radius: 10px;
+border: 1px solid #E89900;
+font-family: monospace;
+color:#3e3d6b;
+padding: 4px;
+}
+
+input[type=text]::placeholder{
+color: #979ea8;
+}
+
+input[type=text]:disabled{
+color: #979ea8;
+border-color: #7c7e81;
+background-color: #e3e6eb81;
+}
+
+input[type=email]{
+border-radius: 10px;
+border: 1px solid #E89900;
+color:#3e3d6b;
+padding: 4px;
+}
+
+
+/* BUTTONS */
+.button {
+color: rgb(255, 255, 255);
+background-color: #44589C;
+font-size: 20px;
+font-family: "syne";
+font-weight: 600;
+margin-right: 10px;
+margin-left: 10px;
+padding: 14px;
+padding-right: 30px;
+padding-left: 30px;
+border: none;
+border-radius: 30px;
+cursor: pointer;
+}
+.button:hover {
+background-color: #E89900;
+transition-duration: 0.25s;
+}
