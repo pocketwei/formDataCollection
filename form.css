@@ -108,7 +108,7 @@ padding: 4px;
 font-family: monospace;
 }
 
-input[name="billing_address_no"]{
+input[id="billing_address_no"]{
 margin-top: 5px;
 }
 
