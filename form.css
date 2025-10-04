@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 body {
 font-family: "Syne";
-margin: 20px;
 max-width: 560px;
 color:#44589C;
+margin: auto;
 }
+
+
 
 /* PARAGRAPHS & HEADERS */
 legend {
@@ -68,7 +70,7 @@ border-style: dotted;
 }
 
 textarea {
-max-width: 560px;
+max-width: 566px;
 border: 1px solid #E89900;
 padding: 4px;
 color:#3e3d6b;
