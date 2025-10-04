@@ -105,6 +105,7 @@ border-radius: 10px;
 border: 1px solid #E89900;
 color:#3e3d6b;
 padding: 4px;
+font-family: monospace;
 }
 
 input[name="billing_address_no"]{
