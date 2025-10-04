@@ -6,18 +6,18 @@
     <form id="commissionRequest" method="POST" data-netlify="true">
        <input type="hidden" name="subject" data-remove-prefix value="Commission request">
         <h3>Are you familiar and do you agree with the Terms of Service?</h3>
-            <label><input type="checkbox" id="yesToS" name="yesToS" required> Yes to all, we can proceed!</label><br>
+            <label><input type="checkbox" id="yesToS" required> Yes to all, we can proceed!</label><br>
         <br>
         <fieldset><legend>YOUR COMMISSION</legend>
             <h1>Style of your commission</h1>
-                <label><input type="radio" id="style1_hb" name="commission_style" value="STYLE1_HB" required> STYLE 1 - halfbody</label><br>
-                <label><input type="radio" id="style1_fb" name="commission_style" value="STYLE1_FB"> STYLE 1 - fullbody</label><br>
-                <label><input type="radio" id="style2_hb" name="commission_style" value="STYLE2_HB"> STYLE 2 - halfbody</label><br>
-                <label><input type="radio" id="style2_fb" name="commission_style" value="STYLE2_FB"> STYLE 2 - fullbody</label><br>
-                <label><input type="radio" id="style3" name="commission_style" value="STYLE3"> STYLE 3 (halfbody only)</label><br>
-                <label><input type="radio" id="style4" name="commission_style" value="STYLE4"> STYLE 4 (halfbody only)</label><br>
-                <label><input type="radio" id="style5" name="commission_style" value="STYLE5"> STYLE 5 (sequential art)</label><br>
-                <label><input type="radio" id="unsure" name="commission_style" value="unsure"> Unsure (I will contact you to figure it out!)</label><br>
+                <label><input type="radio" id="style1_hb" name="Commission style" value="STYLE 1 - halfbody" required> STYLE 1 - halfbody</label><br>
+                <label><input type="radio" id="style1_fb" name="Commission style" value="STYLE 1 - fullbody"> STYLE 1 - fullbody</label><br>
+                <label><input type="radio" id="style2_hb" name="Commission style" value="STYLE 2 - halfbody"> STYLE 2 - halfbody</label><br>
+                <label><input type="radio" id="style2_fb" name="Commission style" value="STYLE 2 - fullbody"> STYLE 2 - fullbody</label><br>
+                <label><input type="radio" id="style3" name="Commission style" value="STYLE 3"> STYLE 3 (halfbody only)</label><br>
+                <label><input type="radio" id="style4" name="Commission style" value="STYLE 4"> STYLE 4 (halfbody only)</label><br>
+                <label><input type="radio" id="style5" name="Commission style" value="STYLE 5"> STYLE 5 (sequential art)</label><br>
+                <label><input type="radio" id="unsure" name="Commission style" value="unsure"> Unsure (I will contact you to figure it out!)</label><br>
             <br>
             <h1>Do you want an extra background?</h1>
                 <label><input type="radio" id="bg_yes" name="Background" value="yes" required> Yes</label><br>
@@ -28,45 +28,45 @@
                 <label><input type="radio" id="nda_no" name="NDA" value="no"> No</label><br>
             <br>    
             <h1>Do you have a deadline?</h1>
-                <label><input type="radio" id="deadline_yes" name="deadline" value="yes" required> Yes, my deadline is </label>
-                <input type="text" id="deadline" name="deadline" placeholder="date in DD/MM/YYYY" maxlength="10" size="20" disabled><br>
-                <label><input type="radio" id="deadline_no" name="deadline" value="no"> No</label><br>
+                <label><input type="radio" id="deadline_yes" name="Deadline" value="yes" required> Yes, my deadline is </label>
+                <input type="text" id="deadline" name="Deadline" placeholder="date in DD/MM/YYYY" maxlength="10" size="20" disabled><br>
+                <label><input type="radio" id="deadline_no" name="Deadline" value="no"> No</label><br>
             <br>
             <h1>Describe your idea!</h1>
-                <textarea id="commission_prompt" name="commission_prompt" rows="4" cols="53" minlength="20" maxlength="400" placeholder="Mood, poses, expressions, background ideas if applicable, story/scenario, number of characters, etc." required></textarea><br>
+                <textarea id="commission_prompt" name="Idea" rows="4" cols="53" minlength="20" maxlength="400" placeholder="Mood, poses, expressions, background ideas if applicable, story/scenario, number of characters, etc." required></textarea><br>
             <br>        
             <h1>References link</h1>
-                <input type="text" id="ref_link" name="ref_link" maxlength="150" size="50" placeholder="SwissTransfer, Google Drive, Dropbox, etc." required><br>
+                <input type="text" id="ref_link" name="References" maxlength="150" size="50" placeholder="SwissTransfer, Google Drive, Dropbox, etc." required><br>
         </fieldset>
         <fieldset><legend>CONTACT INFO</legend>
             <h1>Your preferred name</h1>
-                <input type="text" id="name" name="name" maxlength="70" size="50" required><br><br>
+                <input type="text" id="name" name="Name" maxlength="70" size="50" required><br><br>
             <h1>Email address to be used as contact method</h1>
                 <input type="email" id="email" name="email" maxlength="80" size="50" required><br>
             <br>
             <span>Upon completion, the artwork will be sent to you via a SwissTransfer link. It expires after 30 days, so please download your files before that.</span><br>
             <p><i>I usually keep files as backup so you may ask for them in the future if you happen to lose them, but keep in mind that I'm not safe from data losses either! </i></p>
-                <label><input type="checkbox" id="yesTransfer" name="yesTransfer" required> Got it!</label><br>
+                <label><input type="checkbox" id="yesTransfer" required> Got it!</label><br>
         </fieldset>
         <fieldset><legend>BILLING</legend>
             <h2>Full legal name</h2>
             <p><i>I am legally obliged to mention it on invoices and for record-keeping.  It will be kept strictly private, and your pseudonym or preferred name will always be used in communications.</i></p>
-                <input type="text" id="billing_name" name="billing_name" size="50" maxlength="80" required><br><br>
+                <input type="text" id="billing_name" name="Billing name" size="50" maxlength="80" required><br><br>
             <h2>Billing address</h2>
             <p><i> Again, I am legally obliged to ask for a billing address to mention on invoices, and it will be kept strictly private. <u>You are allowed to refuse to communicate it.</u></i></p>
-                <input type="text" id="billing_address" name="billing_address" size="50" maxlength="120" required><br>
-                <label><input type="checkbox" id="billing_address_no" name="billing_address_no"> I refuse to communicate my billing address</label><br>
+                <input type="text" id="billing_address" name="Billing address" size="50" maxlength="120" required><br>
+                <label><input type="checkbox" id="billing_address_no"> I refuse to communicate my billing address</label><br>
             <br>
             <h2>Which payment methods are available to you?</h2>
             <p>Please note: euro is the preferred currency and the commission will be billed in euro.</i></p>
-                <label><input type="checkbox" id="payment_card" name="payment" value="card"> Card (only Mastercard/Visa/Maestro)</label><br>
-                <label><input type="checkbox" id="payment_stripe" name="payment" value="stripe"> Stripe</label><br>
-                <label><input type="checkbox" id="payment_paypal" name="payment" value="paypal"> Paypal</label><br>
-                <label><input type="checkbox" id="payment_none" name="payment" value="other"> None of the above</label><br>
-                <input type="text" id="payment_other" name="payment_other" size="50" style="display: none" maxlength="80" placeholder="Which other service can you use?">
+                <label><input type="checkbox" id="payment_card" name="Payment" value="Card"> Card (only Mastercard/Visa/Maestro)</label><br>
+                <label><input type="checkbox" id="payment_stripe" name="Payment" value="Stripe"> Stripe</label><br>
+                <label><input type="checkbox" id="payment_paypal" name="Payment" value="Paypal"> Paypal</label><br>
+                <label><input type="checkbox" id="payment_none" name="Payment" value="Other"> None of the above</label><br>
+                <input type="text" id="payment_other" name="Payment" size="50" style="display: none" maxlength="80" placeholder="Which other service can you use?">
         </fieldset>
         <p>Let me know if you have any other concern or questions!</p>
-            <textarea id="questions" name="questions" rows="4" cols="120" maxlength="400"></textarea><br>
+            <textarea id="questions" name="Questions" rows="4" cols="120" maxlength="400"></textarea><br>
             <br>
             <div class="button-row">
                 <input class="button" type="submit" value="Send">
