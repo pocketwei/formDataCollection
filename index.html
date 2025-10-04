@@ -4,7 +4,7 @@
     </head>
     <body>
     <form id="commissionRequest" method="POST" data-netlify="true">
-        <p>Are you familiar and do you agree with the info and the Terms of Service presented in the link above?</p>
+        <h3>Are you familiar and do you agree with the Terms of Service?</h3>
             <label><input type="checkbox" id="yesToS" name="yesToS" required> Yes to all, we can proceed!</label><br>
         <br>
         <fieldset><legend>YOUR COMMISSION</legend>
@@ -53,19 +53,19 @@
                 <input type="text" id="billing_name" name="billing_name" size="50" maxlength="80" required><br><br>
             <h2>Billing address</h2>
             <p><i> Again, I am legally obliged to ask for a billing address to mention on invoices, and it will be kept strictly private. <u>You are allowed to refuse to communicate it.</u></i></p>
-                <input type="text" id="billing_address" name="billing_address" size="50" maxlength="120" required><br><br>
+                <input type="text" id="billing_address" name="billing_address" size="50" maxlength="120" required><br>
                 <label><input type="checkbox" id="billing_address_no" name="billing_address_no"> I refuse to communicate my billing address</label><br>
             <br>
             <h2>Which payment methods are available to you?</h2>
             <p>Please note: euro is the preferred currency and the commission will be billed in euro.</i></p>
-                <label><input type="checkbox" id="payment_card" name="payment" value="card"> Credit/debit card (Mastercard, Visa or Maestro only)</label><br>
+                <label><input type="checkbox" id="payment_card" name="payment" value="card"> Card (only Mastercard/Visa/Maestro)</label><br>
                 <label><input type="checkbox" id="payment_stripe" name="payment" value="stripe"> Stripe</label><br>
                 <label><input type="checkbox" id="payment_paypal" name="payment" value="paypal"> Paypal</label><br>
                 <label><input type="checkbox" id="payment_none" name="payment" value="other"> None of the above</label><br>
                 <input type="text" id="payment_other" name="payment_other" size="50" style="display: none" maxlength="80" placeholder="Which other service can you use?">
         </fieldset>
         <p>Let me know if you have any other concern or questions!</p>
-            <textarea id="questions" name="questions" rows="4" cols="85" maxlength="400"></textarea><br>
+            <textarea id="questions" name="questions" rows="4" cols="120" maxlength="400"></textarea><br>
             <br>
             <div class="button-row">
                 <input class="button" type="submit" value="Send">
